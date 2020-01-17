@@ -1,0 +1,23 @@
+What should be installed
+
+Tools:
+- tmux
+- nvim
+- zsh and oh-my-zsh
+- alacritty
+- git
+- ctags
+
+Utilites:
+- fd-find
+- htop (change to ytop when it will be done by the author)
+- dircolors (synchronize with nord git repository)
+
+Languages:
+- rust
+- clang (probably included in rust packages)
+- npm
+
+Not important:
+- cloc
+- typespeed
