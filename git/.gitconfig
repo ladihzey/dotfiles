@@ -1,7 +1,0 @@
-[core]
-	editor = vim
-[alias]
-	amend = "commit --amend --no-edit"
-	lg = "log --graph --abbrev-commit --pretty=oneline"
-[push]
-	default = current

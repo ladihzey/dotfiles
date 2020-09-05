@@ -1,0 +1,12 @@
+[core]
+	editor = nvim
+[alias]
+	amend = "commit --amend --no-edit"
+	lg = "log --graph --abbrev-commit --pretty=oneline"
+	exclude = "!f() { nvim .git/info/exclude; }; f"
+	wip = "!f() { git add --all; git commit -m 'WIP'; }; f"
+[push]
+	default = current
+[user]
+	email = yegorzhidal@gmail.com
+	name = ladihzey

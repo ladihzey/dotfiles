@@ -1,15 +1,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -42,7 +38,6 @@ set noshowmode
 set t_Co=256
 set scrolloff=1
 set cursorline
-set number
 set list
 set listchars=tab:┊\ ,space:∙,trail:✕
 set fillchars+=vert:│
@@ -53,11 +48,9 @@ set smartindent
 
 let NERDTreeAutoDeleteBuffer = 1
 let g:EasyMotion_smartcase = 1
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_map = '<C-P>'
 
 let mapleader = "\<Space>"
-inoremap df <esc>
+inoremap eu <esc>
 vnoremap v <esc>
 nnoremap <silent> <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>r :so $MYVIMRC<Enter>
