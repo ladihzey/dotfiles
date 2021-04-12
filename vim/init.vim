@@ -6,6 +6,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim'
 
 call plug#end()
 

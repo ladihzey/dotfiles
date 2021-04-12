@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
@@ -29,9 +29,22 @@ export PGHOST=localhost
 alias start-pg="sudo service postgresql start"
 alias run-pg="sudo -u postgres psql"
 
+# Docker
+
+alias docker-stop="docker stop \$(docker ps -a -q)"
+
 # Misc -----------------------------------------------
 if [ -r ~/.dir_colors ]; then
     eval $(dircolors ~/.dir_colors)
 fi
 
-alias ttl4="sudo sysctl net.ipv4.ip_default_ttl=65"
+alias storyfix='
+    mv ~/.zsh_history ~/.zsh_history_bad;
+    strings ~/.zsh_history_bad > ~/.zsh_history;
+    fc -R ~/.zsh_history;
+    rm ~/.zsh_history_bad;
+'
+alias ttl4='sudo sysctl net.ipv4.ip_default_ttl=65'
+alias fd='fdfind'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
