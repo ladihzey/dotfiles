@@ -2,7 +2,7 @@
 	editor = nvim
 [alias]
 	amend = "commit --amend --no-edit"
-	lg = "log --graph --abbrev-commit --pretty=oneline"
+	lg = "log --abbrev-commit --pretty=oneline"
 	exclude = "!f() { nvim .git/info/exclude; }; f"
 	wip = "!f() { git add --all; git commit -m 'WIP'; }; f"
 [push]

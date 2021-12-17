@@ -23,12 +23,12 @@ colors:
     magenta: '0xB48EAD'
     cyan: '0x8FBCBB'
     white: '0xECEFF4'
-background_opacity: 1.0
+background_opacity: 1
 font:
   normal:
-    family: 'JetBrainsMono'
+    family: 'JetBrainsMono Nerd Font Mono'
     style: 'Regular'
-  size: 14.0
+  size: 13.4
   offset:
     x: 0
-    y: 1
+    y: 0 
