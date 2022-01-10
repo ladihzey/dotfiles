@@ -1,9 +1,7 @@
 {
-  // =========================== EDITOR CONFIG ==============================
-  // General UI ------------------------------------------------
+  // General UI --------------------------------------------------------------------------------------------------------
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1,
-    "workbench.activityBar.visible": false,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 1,
     "workbench.editor.limit.perEditorGroup": true,
@@ -19,10 +17,10 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
 
-  // Editor ---------------------------------------------------
+  // Editor ------------------------------------------------------------------------------------------------------------
     "editor.suggest.showWords": false,
     "editor.suggestSelection": "first",
-    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.insertSpaces": true,
     "editor.quickSuggestions": false,
     "editor.fontLigatures": true,
@@ -43,28 +41,28 @@
     "debug.javascript.autoAttachFilter": "disabled",
     "debug.allowBreakpointsEverywhere": true,
 
-  // Terminal ---------------------------------------------------------
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  // Terminal ----------------------------------------------------------------------------------------------------------
+    "terminal.integrated.fontFamily": "JetBrains Mono",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.localEchoLatencyThreshold": -1,
 
-  // Code formatting and languages ------------------------------------
+  // Code formatting and languages -------------------------------------------------------------------------------------
     "[html]": {
-      "editor.tabSize": 2,
+      "editor.tabSize": 2
     },
     "[json]": {
-      "editor.tabSize": 2,
+      "editor.tabSize": 2
     },
     "[md]": {
-      "editor.wordWrap": "on",
+      "editor.wordWrap": "on"
     },
     "typescript.tsserver.log": "off",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
     "files.eol": "\n",
 
-  // VIM --------------------------------
+  // VIM ---------------------------------------------------------------------------------------------------------------
     "vim.surround": true,
     "vim.easymotion": true,
     "vim.camelCaseMotion.enable": true,
@@ -94,11 +92,11 @@
       },
       {
         "before": ["k"],
-        "after": ["g", "k"],
+        "after": ["g", "k"]
       },
       {
         "before": ["g", "p"],
-        "after": ["`", "[", "v", "`", "]"],
+        "after": ["`", "[", "v", "`", "]"]
       },
       {
         "before": ["<"],
@@ -106,8 +104,12 @@
       },
       {
         "before": [">"],
-        "commands": ["editor.action.indentLines"],
+        "commands": ["editor.action.indentLines"]
       },
+      {
+        "before": ["<space>"],
+        "commands": ["whichkey.show"]
+      }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
       {
@@ -126,9 +128,86 @@
         "before": [">"],
         "commands": ["editor.action.indentLines"]
       },
+      {
+        "before": ["<space>"],
+        "commands": ["whichkey.show"]
+      }
     ],
 
-  // Misc---------------------------------------------------
+  // Whichkey ----------------------------------------------------------------------------------------------------------
+    "whichkey.sortOrder": "custom",
+    "whichkey.bindings": [
+      {
+        "key": "u",
+        "name": "$(default-view-icon) User interface...",
+        "type": "bindings",
+        "bindings": [
+          {
+            "key": "e",
+            "name": "$(explorer-view-icon) Explorer",
+            "type": "command",
+            "command": "workbench.view.explorer"
+          },
+          {
+            "key": "x",
+            "name": "$(extensions-view-icon) Extensions",
+            "type": "command",
+            "command": "workbench.view.extensions"
+          },
+          {
+            "key": "d",
+            "name": "$(debug-alt) Debugger",
+            "type": "command",
+            "command": "workbench.view.debug"
+          },
+          {
+            "key": "g",
+            "name": "$(source-control-view-icon) Git",
+            "type": "command",
+            "command": "workbench.view.scm"
+          },
+          {
+            "key": "o",
+            "name": "$(outline-view-icon) Outline",
+            "type": "command",
+            "command": "outline.focus"
+          }
+        ]
+      },
+      {
+        "key": "l",
+        "name": "$(lightbulb) Language...",
+        "type": "bindings",
+        "bindings": [
+          {
+            "key": "r",
+            "name": "$(replace) Rename",
+            "type": "command",
+            "command": "editor.action.rename"
+          },
+          {
+            "key": "q",
+            "name": "$(lightbulb-autofix) Quick Fix",
+            "type": "command",
+            "command": "editor.action.quickFix"
+          },
+          {
+            "key": "f",
+            "name": "$(references) References",
+            "type": "command",
+            "command": "editor.action.referenceSearch.trigger"
+          },
+          {
+            "key": "d",
+            "name": "$(symbol-interface) Definition",
+            "type": "command",
+            "command": "editor.action.revealDefinition"
+          }
+        ]
+      }
+    ],
+
+  // Misc---------------------------------------------------------------------------------------------------------------
     "telemetry.telemetryLevel": "off",
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
@@ -139,4 +218,5 @@
     },
     "livePreview.notifyOnOpenLooseFile": false,
     "update.mode": "manual",
+    "workbench.activityBar.visible": false
 }
