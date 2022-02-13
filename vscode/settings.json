@@ -2,6 +2,7 @@
   // General UI --------------------------------------------------------------------------------------------------------
     "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 1,
+    "workbench.activityBar.visible": false,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 1,
     "workbench.editor.limit.perEditorGroup": true,
@@ -38,6 +39,7 @@
     "editor.lineHeight": 19,
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
     "debug.javascript.autoAttachFilter": "disabled",
     "debug.allowBreakpointsEverywhere": true,
 
@@ -202,6 +204,69 @@
             "name": "$(symbol-interface) Definition",
             "type": "command",
             "command": "editor.action.revealDefinition"
+          },
+          {
+            "key": "h",
+            "name": "$(info) Hover Info",
+            "type": "command",
+            "command": "editor.action.showHover"
+          }
+        ]
+      },
+      {
+        "key": "s",
+        "name": "$(split-horizontal) Split view...",
+        "type": "bindings",
+        "bindings": [
+          {
+            "key": "h",
+            "name": "$(split-horizontal) Split horizontal",
+            "type": "command",
+            "command": "workbench.action.splitEditorRight"
+          },
+          {
+            "key": "j",
+            "name": "$(split-vertical) Split vertical",
+            "type": "command",
+            "command": "workbench.action.splitEditorDown"
+          }
+        ],
+      },
+      {
+        "key": "d",
+        "name": "$(debug-alt) Debugger...",
+        "type": "bindings",
+        "bindings": [
+          {
+            "key": "b",
+            "name": "$(activate-breakpoints) Breakpoints...",
+            "type": "bindings",
+            "bindings": [
+              {
+                "key": "b",
+                "name": "$(debug-breakpoint) Breakpoint",
+                "type": "command",
+                "command": "editor.debug.action.toggleBreakpoint"
+              },
+              {
+                "key": "c",
+                "name": "$(debug-breakpoint-function) Conditional Breakpoint",
+                "type": "command",
+                "command": "editor.debug.action.conditionalBreakpoint"
+              },
+              {
+                "key": "l",
+                "name": "$(debug-breakpoint-log) Log Point",
+                "type": "command",
+                "command": "editor.debug.action.addLogPoint"
+              }
+            ]
+          },
+          {
+            "key": "h",
+            "name": "$(info) Hover Info",
+            "type": "command",
+            "command": "editor.debug.action.showDebugHover"
           }
         ]
       }
@@ -213,10 +278,7 @@
     "extensions.ignoreRecommendations": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "cSpell.language": "en,ru-RU",
-    "files.exclude": {
-      "**/.hokusai-tmp": true
-    },
     "livePreview.notifyOnOpenLooseFile": false,
     "update.mode": "manual",
-    "workbench.activityBar.visible": false
+    "security.workspace.trust.untrustedFiles": "open",
 }
