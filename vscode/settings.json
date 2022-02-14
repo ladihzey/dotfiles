@@ -21,7 +21,7 @@
   // Editor ------------------------------------------------------------------------------------------------------------
     "editor.suggest.showWords": false,
     "editor.suggestSelection": "first",
-    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.insertSpaces": true,
     "editor.quickSuggestions": false,
     "editor.fontLigatures": true,
@@ -44,7 +44,7 @@
     "debug.allowBreakpointsEverywhere": true,
 
   // Terminal ----------------------------------------------------------------------------------------------------------
-    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.localEchoLatencyThreshold": -1,
@@ -281,4 +281,5 @@
     "livePreview.notifyOnOpenLooseFile": false,
     "update.mode": "manual",
     "security.workspace.trust.untrustedFiles": "open",
+    "testing.automaticallyOpenPeekViewDuringAutoRun": true
 }
