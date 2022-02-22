@@ -220,15 +220,15 @@
         "bindings": [
           {
             "key": "h",
-            "name": "$(split-horizontal) Split horizontal",
-            "type": "command",
-            "command": "workbench.action.splitEditorRight"
-          },
-          {
-            "key": "j",
-            "name": "$(split-vertical) Split vertical",
+            "name": "$(split-vertical)  Split horizontal",
             "type": "command",
             "command": "workbench.action.splitEditorDown"
+          },
+          {
+            "key": "v",
+            "name": "$(split-horizontal) Split vertical",
+            "type": "command",
+            "command": "workbench.action.splitEditorRight"
           }
         ],
       },
@@ -239,6 +239,12 @@
         "bindings": [
           {
             "key": "b",
+            "name": "$(debug-breakpoint) Breakpoint",
+            "type": "command",
+            "command": "editor.debug.action.toggleBreakpoint"
+          },
+          {
+            "key": "B",
             "name": "$(activate-breakpoints) Breakpoints...",
             "type": "bindings",
             "bindings": [
@@ -269,6 +275,43 @@
             "command": "editor.debug.action.showDebugHover"
           }
         ]
+      },
+      {
+        "key": " ",
+        "name": "$(arrow-both) Navigate to...",
+        "type": "bindings",
+        "bindings": [
+          {
+            "key": "h",
+            "name": "$(arrow-left) Focus on left group",
+            "type": "command",
+            "command": "workbench.action.focusLeftGroup"
+          },
+          {
+            "key": "j",
+            "name": "$(arrow-down) Focus on bottom group",
+            "type": "command",
+            "command": "workbench.action.focusBelowGroup"
+          },
+          {
+            "key": "k",
+            "name": "$(arrow-up) Focus on top group",
+            "type": "command",
+            "command": "workbench.action.focusAboveGroup"
+          },
+          {
+            "key": "l",
+            "name": "$(arrow-right) Focus on right group",
+            "type": "command",
+            "command": "workbench.action.focusRightGroup"
+          },
+          {
+            "key": "t",
+            "name": "$(test-view-icon) Go to spec/implementation",
+            "type": "command",
+            "command": "extension.goToSpec"
+          }
+        ]
       }
     ],
 
@@ -281,5 +324,6 @@
     "livePreview.notifyOnOpenLooseFile": false,
     "update.mode": "manual",
     "security.workspace.trust.untrustedFiles": "open",
-    "testing.automaticallyOpenPeekViewDuringAutoRun": true
+    "testing.automaticallyOpenPeekViewDuringAutoRun": true,
+    "editor.multiCursorModifier": "ctrlCmd"
 }
