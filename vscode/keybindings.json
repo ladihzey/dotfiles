@@ -85,6 +85,11 @@
         "key": "ctrl+shift+t",
         "command": "-extension.goToSpec",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]
 

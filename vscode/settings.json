@@ -1,7 +1,7 @@
 {
   // General UI --------------------------------------------------------------------------------------------------------
     "window.menuBarVisibility": "toggle",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "workbench.activityBar.visible": false,
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.value": 1,
@@ -137,11 +137,11 @@
     ],
 
   // Whichkey ----------------------------------------------------------------------------------------------------------
-    "whichkey.sortOrder": "custom",
+    "whichkey.sortOrder": "none",
     "whichkey.bindings": [
       {
         "key": "u",
-        "name": "$(default-view-icon) User interface...",
+        "name": "$(screen-full) User interface...",
         "type": "bindings",
         "bindings": [
           {
@@ -230,7 +230,7 @@
             "type": "command",
             "command": "workbench.action.splitEditorRight"
           }
-        ],
+        ]
       },
       {
         "key": "d",
@@ -283,25 +283,25 @@
         "bindings": [
           {
             "key": "h",
-            "name": "$(arrow-left) Focus on left group",
+            "name": "$(triangle-left) Focus on left group",
             "type": "command",
             "command": "workbench.action.focusLeftGroup"
           },
           {
             "key": "j",
-            "name": "$(arrow-down) Focus on bottom group",
+            "name": "$(triangle-down) Focus on bottom group",
             "type": "command",
             "command": "workbench.action.focusBelowGroup"
           },
           {
             "key": "k",
-            "name": "$(arrow-up) Focus on top group",
+            "name": "$(triangle-up) Focus on top group",
             "type": "command",
             "command": "workbench.action.focusAboveGroup"
           },
           {
             "key": "l",
-            "name": "$(arrow-right) Focus on right group",
+            "name": "$(triangle-right) Focus on right group",
             "type": "command",
             "command": "workbench.action.focusRightGroup"
           },
@@ -312,6 +312,12 @@
             "command": "extension.goToSpec"
           }
         ]
+      },
+      {
+        "key": "c",
+        "name": "$(symbol-parameter) Comment",
+        "type": "command",
+        "command": "editor.action.commentLine"
       }
     ],
 
