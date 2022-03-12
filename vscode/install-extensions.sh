@@ -1,0 +1,10 @@
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension streetsidesoftware.code-spell-checker-russian
+code --install-extension bmalehorn.vscode-fish
+code --install-extension ms-vscode.live-server
+code --install-extension matklad.rust-analyzer
+code --install-extension vscodevim.vim
+code --install-extension VSpaceCode.whichkey
+code --install-extension arcticicestudio.nord-visual-studio-code
+code --install-extension Lourenci.go-to-spec
+code --install-extension EditorConfig.EditorConfig
