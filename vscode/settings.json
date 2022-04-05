@@ -32,7 +32,6 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.glyphMargin": true,
     "editor.lineNumbers": "off",
-    "editor.folding": false,
     "editor.tabSize": 4,
     "editor.rulers": [120],
     "editor.accessibilitySupport": "off",
@@ -67,7 +66,7 @@
   // VIM ---------------------------------------------------------------------------------------------------------------
     "vim.surround": true,
     "vim.easymotion": true,
-    "vim.camelCaseMotion.enable": true,
+    "vim.camelCaseMotion.enable": false, // disabled due to use of whichkey
 
     "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
     "vim.easymotionMarkerBackgroundColor": "#00000000",
@@ -141,7 +140,7 @@
     "whichkey.bindings": [
       {
         "key": "u",
-        "name": "$(screen-full) User interface...",
+        "name": "$(book) User interface...",
         "type": "bindings",
         "bindings": [
           {
@@ -166,19 +165,25 @@
             "key": "g",
             "name": "$(source-control-view-icon) Git",
             "type": "command",
-            "command": "workbench.view.scm"
+            "command": "workbench.scm.focus"
           },
           {
             "key": "o",
             "name": "$(outline-view-icon) Outline",
             "type": "command",
             "command": "outline.focus"
+          },
+          {
+            "key": "f",
+            "name": "$(fullscreen) Fullscreen",
+            "type": "command",
+            "command": "workbench.action.toggleFullScreen",
           }
         ]
       },
       {
-        "key": "l",
-        "name": "$(lightbulb) Language...",
+        "key": "a",
+        "name": "$(lightbulb) Code actions...",
         "type": "bindings",
         "bindings": [
           {
@@ -194,18 +199,6 @@
             "command": "editor.action.quickFix"
           },
           {
-            "key": "f",
-            "name": "$(references) References",
-            "type": "command",
-            "command": "editor.action.referenceSearch.trigger"
-          },
-          {
-            "key": "d",
-            "name": "$(symbol-interface) Definition",
-            "type": "command",
-            "command": "editor.action.revealDefinition"
-          },
-          {
             "key": "h",
             "name": "$(info) Hover Info",
             "type": "command",
@@ -214,21 +207,76 @@
         ]
       },
       {
-        "key": "s",
-        "name": "$(split-horizontal) Split view...",
+        "key": "w",
+        "name": "$(window) Window...",
         "type": "bindings",
         "bindings": [
           {
-            "key": "h",
-            "name": "$(split-vertical)  Split horizontal",
+            "key": "s",
+            "name": "$(split-horizontal) Split horizontal",
+            "type": "command",
+            "command": "workbench.action.splitEditorRight"
+          },
+          {
+            "key": "S",
+            "name": "$(split-vertical) Split vertical",
             "type": "command",
             "command": "workbench.action.splitEditorDown"
           },
           {
-            "key": "v",
-            "name": "$(split-horizontal) Split vertical",
+            "key": "h",
+            "name": "$(triangle-left) Focus on left group",
             "type": "command",
-            "command": "workbench.action.splitEditorRight"
+            "command": "workbench.action.focusLeftGroup"
+          },
+          {
+            "key": "j",
+            "name": "$(triangle-down) Focus on bottom group",
+            "type": "command",
+            "command": "workbench.action.focusBelowGroup"
+          },
+          {
+            "key": "k",
+            "name": "$(triangle-up) Focus on top group",
+            "type": "command",
+            "command": "workbench.action.focusAboveGroup"
+          },
+          {
+            "key": "l",
+            "name": "$(triangle-right) Focus on right group",
+            "type": "command",
+            "command": "workbench.action.focusRightGroup"
+          },
+          {
+            "key": "m",
+            "name": "$() Move editor...",
+            "type": "bindings",
+            "bindings": [
+              {
+                "key": "h",
+                "name": "$(triangle-left) Move editor left",
+                "type": "command",
+                "command": "workbench.action.moveActiveEditorGroupLeft"
+              },
+              {
+                "key": "j",
+                "name": "$(triangle-down) Move editor down",
+                "type": "command",
+                "command": "workbench.action.moveActiveEditorGroupDown"
+              },
+              {
+                "key": "k",
+                "name": "$(triangle-up) Move editor up",
+                "type": "command",
+                "command": "workbench.action.moveActiveEditorGroupUp"
+              },
+              {
+                "key": "l",
+                "name": "$(triangle-right) Move editor right",
+                "type": "command",
+                "command": "workbench.action.moveActiveEditorGroupRight"
+              }
+            ]
           }
         ]
       },
@@ -277,39 +325,61 @@
         ]
       },
       {
+        "key": "g",
+        "name": "$(source-control) Git...",
+        "type": "bindings",
+        "bindings": [
+          {
+            "key": "r",
+            "name": "$(discard) Revert selected",
+            "type": "command",
+            "command": "git.revertSelectedRanges",
+            "when": "isInDiffEditor"
+          },
+          {
+            "key": "s",
+            "name": "$(add) Stage selected",
+            "type": "command",
+            "command": "git.stageSelectedRanges",
+            "when": "isInDiffEditor"
+          },
+          {
+            "key": "S",
+            "name": "$(remove) Unstage selected",
+            "type": "command",
+            "command": "git.unstageSelectedRanges",
+            "when": "isInDiffEditor"
+          },
+        ],
+      },
+      {
         "key": " ",
         "name": "$(arrow-both) Navigate to...",
         "type": "bindings",
         "bindings": [
           {
-            "key": "h",
-            "name": "$(triangle-left) Focus on left group",
-            "type": "command",
-            "command": "workbench.action.focusLeftGroup"
-          },
-          {
-            "key": "j",
-            "name": "$(triangle-down) Focus on bottom group",
-            "type": "command",
-            "command": "workbench.action.focusBelowGroup"
-          },
-          {
-            "key": "k",
-            "name": "$(triangle-up) Focus on top group",
-            "type": "command",
-            "command": "workbench.action.focusAboveGroup"
-          },
-          {
-            "key": "l",
-            "name": "$(triangle-right) Focus on right group",
-            "type": "command",
-            "command": "workbench.action.focusRightGroup"
-          },
-          {
             "key": "t",
             "name": "$(test-view-icon) Go to spec/implementation",
             "type": "command",
             "command": "extension.goToSpec"
+          },
+          {
+            "key": "o",
+            "name": "$(link) Open link",
+            "type": "command",
+            "command": "editor.action.openLink"
+          },
+          {
+            "key": "r",
+            "name": "$(references) References",
+            "type": "command",
+            "command": "editor.action.referenceSearch.trigger"
+          },
+          {
+            "key": "d",
+            "name": "$(symbol-interface) Definition",
+            "type": "command",
+            "command": "editor.action.revealDefinition"
           }
         ]
       },
@@ -331,5 +401,7 @@
     "update.mode": "manual",
     "security.workspace.trust.untrustedFiles": "open",
     "testing.automaticallyOpenPeekViewDuringAutoRun": true,
-    "editor.multiCursorModifier": "ctrlCmd"
+    "editor.multiCursorModifier": "ctrlCmd",
+    "jestrunner.disableCodeLens": true,
+    "editor.folding": false
 }
