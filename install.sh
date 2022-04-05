@@ -10,3 +10,7 @@ ln -sf ${DOTFILES}/tools/starship.toml      ~/.config/startship.toml
 ln -sf ${DOTFILES}/fish/config.fish         ~/.config/fish/config.fish
 ls -sf ${DOTFILES}/vscode/settings.json     ~/.config/Code/User/settings.json
 ls -sf ${DOTFILES}/vscode/keybindings.json  ~/.config/Code/User/keybindings.json
+
+# Install volta node version manager
+
+curl https://get.volta.sh | bash
