@@ -7,8 +7,8 @@ set fish_greeting
 
 # Utilities ===================================================================
 starship init fish | source               # starship
-thefuck --alias | source                  # thefuck
 set -gx VOLTA_HOME "$HOME/.volta"         # volta
+source ~/.asdf/asdf.fish                  # asdf language manager
 
 # Aliases =====================================================================
 alias md="mkdir"
