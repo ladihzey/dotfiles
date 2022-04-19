@@ -1,5 +1,133 @@
+format = """
+[](fg:blue)\
+$directory\
+[](bg:green fg:blue)\
+$git_branch\
+$git_status\
+[](fg:green bg:cyan)\
+$nodejs\
+$rust\
+$elixir\
+$python\
+$conda\
+$dart\
+$elm\
+$golang\
+$java\
+$julia\
+$nim\
+[](fg:cyan bg:purple)\
+$time\
+[](fg:purple)
+$character
+"""
+
+[character]
+success_symbol = "[](blue)"
+
+[directory]
+read_only = " "
+style = "bg:blue fg:black"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = ""
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:green fg:black"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:green fg:black"
+format = '[($all_status$ahead_behind )]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:purple fg:black"
+format = '[ 神 $time ]($style)'
+
 [package]
 disabled = true
+symbol = " "
 
 [aws]
 disabled = true
+symbol = "  "
+
+[conda]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[dart]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[ruby]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = " "
+style = "bg:cyan fg:black"
+format = '[ $symbol ($version) ]($style)'
+
+[hg_branch]
+symbol = " "
+
+[memory_usage]
+symbol = " "

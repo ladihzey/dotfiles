@@ -47,6 +47,8 @@
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.localEchoLatencyThreshold": -1,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.minimumContrastRatio": 1,
 
   // Code formatting and languages -------------------------------------------------------------------------------------
     "[html]": {
