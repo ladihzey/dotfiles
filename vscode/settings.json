@@ -9,7 +9,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.editor.showTabs": false,
     "workbench.tree.indent": 20,
-    "workbench.colorTheme": "Nord",
+    "workbench.localHistory.mergeWindow": 30,
     "workbench.colorCustomizations": {
       "editor.lineHighlightBorder": "#ffffff08",
       "editorCursor.foreground": "#ff0000",
@@ -41,6 +41,8 @@
     "editor.unicodeHighlight.invisibleCharacters": false,
     "debug.javascript.autoAttachFilter": "disabled",
     "debug.allowBreakpointsEverywhere": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.folding": false,
 
   // Terminal ----------------------------------------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -170,6 +172,12 @@
             "command": "workbench.scm.focus"
           },
           {
+            "key": "t",
+            "name": "$(test-view-icon) Tests",
+            "type": "command",
+            "command": "workbench.view.testing.focus"
+          },
+          {
             "key": "o",
             "name": "$(outline-view-icon) Outline",
             "type": "command",
@@ -180,6 +188,12 @@
             "name": "$(fullscreen) Fullscreen",
             "type": "command",
             "command": "workbench.action.toggleFullScreen",
+          },
+          {
+            "key": "z",
+            "name": "$(rocket) Zen mode",
+            "type": "command",
+            "command": "workbench.action.toggleZenMode",
           }
         ]
       },
@@ -192,7 +206,8 @@
             "key": "r",
             "name": "$(replace) Rename",
             "type": "command",
-            "command": "editor.action.rename"
+            "command": "editor.action.rename",
+            "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly",
           },
           {
             "key": "q",
@@ -251,7 +266,7 @@
           },
           {
             "key": "m",
-            "name": "$() Move editor...",
+            "name": "$(move) Move editor...",
             "type": "bindings",
             "bindings": [
               {
@@ -340,14 +355,14 @@
           },
           {
             "key": "s",
-            "name": "$(add) Stage selected",
+            "name": "$(diff-added) Stage selected",
             "type": "command",
             "command": "git.stageSelectedRanges",
             "when": "isInDiffEditor"
           },
           {
             "key": "S",
-            "name": "$(remove) Unstage selected",
+            "name": "$(diff-removed) Unstage selected",
             "type": "command",
             "command": "git.unstageSelectedRanges",
             "when": "isInDiffEditor"
@@ -373,15 +388,27 @@
           },
           {
             "key": "r",
-            "name": "$(references) References",
+            "name": "$(references) Go to references",
             "type": "command",
             "command": "editor.action.referenceSearch.trigger"
           },
           {
             "key": "d",
-            "name": "$(symbol-interface) Definition",
+            "name": "$(symbol-interface) Go to definition",
             "type": "command",
             "command": "editor.action.revealDefinition"
+          },
+          {
+            "key": "s",
+            "name": "$(symbol-function) Go to symbol",
+            "type": "command",
+            "command": "workbench.action.gotoSymbol",
+          },
+          {
+            "key": "b",
+            "name": "$(history) Go back",
+            "type": "command",
+            "command": "workbench.action.navigateBack",
           }
         ]
       },
@@ -390,20 +417,37 @@
         "name": "$(symbol-parameter) Comment",
         "type": "command",
         "command": "editor.action.commentLine"
+      },
+      {
+        "key": "f",
+        "name": "$(file) Open file",
+        "type": "command",
+        "command": "workbench.action.files.openFile",
+      },
+      {
+        "key": "F",
+        "name": "$(file-directory) Open folder",
+        "type": "command",
+        "command": "workbench.action.files.openFolder",
       }
     ],
+  
+  // Jest tests
+    "jest.autoRun": "off",
+    "jest.enableCodeLens": false,
+    "jest.jestCommandLine": "yarn test",
 
   // Misc---------------------------------------------------------------------------------------------------------------
     "telemetry.telemetryLevel": "off",
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "cSpell.language": "en,ru-RU",
-    "livePreview.notifyOnOpenLooseFile": false,
     "update.mode": "manual",
     "security.workspace.trust.untrustedFiles": "open",
     "testing.automaticallyOpenPeekViewDuringAutoRun": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "jestrunner.disableCodeLens": true,
-    "editor.folding": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.autoSave": "afterDelay",
+    "cSpell.language": "en,ru-RU",
+    "livePreview.notifyOnOpenLooseFile": false,
+    "powermode.enabled": true,
+    "workbench.colorTheme": "Nord",
 }
