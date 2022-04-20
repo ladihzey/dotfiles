@@ -1,17 +1,21 @@
 # Variables
 set -e fish_user_paths
-set -U fish_user_paths $HOME/.local/bin $HOME/.cargo/bin $HOME/bin $VOLTA_HOME/bin $fish_user_paths
+set -U fish_user_paths $HOME/.local/bin $HOME/.cargo/bin $HOME/bin $fish_user_paths
 
 # Settings ====================================================================
 set fish_greeting
 
 # Utilities ===================================================================
 starship init fish | source               # starship
-set -gx VOLTA_HOME "$HOME/.volta"         # volta
 source ~/.asdf/asdf.fish                  # asdf language manager
 
 # Aliases =====================================================================
 alias md="mkdir"
+
+# Functions
+function git_purge_merged
+    git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d
+end
 
 # Colors ======================================================================
 set nord0 2e3440

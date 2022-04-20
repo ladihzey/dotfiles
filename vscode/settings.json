@@ -46,7 +46,7 @@
 
   // Terminal ----------------------------------------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 13,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.localEchoLatencyThreshold": -1,
     "terminal.integrated.defaultProfile.linux": "fish",
