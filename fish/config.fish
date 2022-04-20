@@ -50,7 +50,7 @@ set fish_color_search_match $nord8
 set fish_color_operator $nord9
 set fish_color_escape $nord13
 set fish_color_cwd $nord8
-set fish_color_autosuggestion $nord0
+set fish_color_autosuggestion $nord3
 set fish_color_user $nord4
 set fish_color_host $nord9
 set fish_color_cancel $nord15
