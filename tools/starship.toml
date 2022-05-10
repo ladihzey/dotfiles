@@ -15,6 +15,7 @@ $elm\
 $golang\
 $java\
 $julia\
+$haskell\
 $nim\
 $lua\
 [](fg:green bg:purple)\
@@ -30,8 +31,8 @@ error_symbol = "[](red)"
 [directory]
 style = "bg:blue fg:black"
 format = "[$path ]($style)"
-truncation_length = 3
-truncation_symbol = ""
+truncation_length = 1
+truncation_symbol = "ﱮ "
 
 [directory.substitutions]
 "Documents" = " "
@@ -119,7 +120,12 @@ style = "bg:green fg:black"
 format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
 
 [rust]
-symbol = ""
+symbol = ""
+style = "bg:green fg:black"
+format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+
+[haskell]
+symbol = ""
 style = "bg:green fg:black"
 format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
 

@@ -184,5 +184,10 @@
         "key": "ctrl+shift+o",
         "command": "-workbench.action.gotoSymbol"
     },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-markdown.showPreview",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
 ]
 

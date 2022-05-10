@@ -41,7 +41,6 @@
     "editor.unicodeHighlight.invisibleCharacters": false,
     "debug.javascript.autoAttachFilter": "disabled",
     "debug.allowBreakpointsEverywhere": true,
-    "editor.multiCursorModifier": "ctrlCmd",
     "editor.folding": false,
 
   // Terminal ----------------------------------------------------------------------------------------------------------
@@ -194,6 +193,13 @@
             "name": "$(rocket) Zen mode",
             "type": "command",
             "command": "workbench.action.toggleZenMode",
+          },
+          {
+            "key": "m",
+            "name": "$(markdown) Markdown preview",
+            "type": "command",
+            "command": "markdown.showPreview",
+            "when": "!notebookEditorFocused && editorLangId == 'markdown'"
           }
         ]
       },
@@ -450,4 +456,9 @@
     "livePreview.notifyOnOpenLooseFile": false,
     "powermode.enabled": true,
     "workbench.colorTheme": "Nord",
+    "timeline.excludeSources": [
+      "timeline.localHistory"
+    ],
+    "editor.inlayHints.enabled": false,
+    "haskell.manageHLS": "PATH",
 }
