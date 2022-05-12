@@ -10,6 +10,7 @@
     "workbench.editor.showTabs": false,
     "workbench.tree.indent": 20,
     "workbench.localHistory.mergeWindow": 30,
+    "workbench.colorTheme": "Nord",
     "workbench.colorCustomizations": {
       "editor.lineHighlightBorder": "#ffffff08",
       "editorCursor.foreground": "#ff0000",
@@ -20,6 +21,7 @@
 
   // Editor ------------------------------------------------------------------------------------------------------------
     "editor.suggest.showWords": false,
+    "editor.inlayHints.enabled": false,
     "editor.suggestSelection": "first",
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.insertSpaces": true,
@@ -438,27 +440,17 @@
       }
     ],
   
-  // Jest tests
-    "jest.autoRun": "off",
-    "jest.enableCodeLens": false,
-    "jest.jestCommandLine": "yarn test",
-
   // Misc---------------------------------------------------------------------------------------------------------------
+    "files.autoSave": "afterDelay",
+    "timeline.excludeSources": [],
     "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.untrustedFiles": "open",
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
-    "update.mode": "manual",
-    "security.workspace.trust.untrustedFiles": "open",
     "testing.automaticallyOpenPeekViewDuringAutoRun": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "files.autoSave": "afterDelay",
     "cSpell.language": "en,ru-RU",
     "livePreview.notifyOnOpenLooseFile": false,
-    "powermode.enabled": true,
-    "workbench.colorTheme": "Nord",
-    "timeline.excludeSources": [
-      "timeline.localHistory"
-    ],
-    "editor.inlayHints.enabled": false,
-    "haskell.manageHLS": "PATH",
+    "update.mode": "manual",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
 }
