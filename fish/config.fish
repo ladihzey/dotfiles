@@ -1,9 +1,7 @@
 # Variables
-set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/.cargo/bin $HOME/bin $fish_user_paths
-
-# Settings ====================================================================
-set fish_greeting
+set -U SHELL /usr/bin/fish
+set -U fish_greeting                      # remove fish greeting
 
 # Utilities ===================================================================
 starship init fish | source               # starship
@@ -11,11 +9,10 @@ source ~/.asdf/asdf.fish                  # asdf language manager
 
 # Aliases =====================================================================
 alias md="mkdir"
-
-# Functions
-function git_purge_merged
-    git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d
-end
+alias ls="exa --icons --group-directories-first"
+alias ll="ls --long --git --no-permissions --no-user"
+alias la="ll --all"
+alias tree="ls --tree"
 
 # Colors ======================================================================
 set nord0 2e3440
@@ -59,5 +56,3 @@ set fish_pager_color_completion $nord6
 set fish_pager_color_description $nord10
 set fish_pager_color_progress $nord12
 set fish_pager_color_secondary $nord1
-
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/yahor/.ghcup/bin $PATH # ghcup-env
