@@ -1,10 +1,10 @@
 format = """
 [](fg:blue)\
 $directory\
-[](bg:yellow fg:blue)\
+[](bg:green fg:blue)\
 $git_branch\
 $git_status\
-[](fg:yellow bg:green)\
+[](fg:green bg:purple)\
 $nodejs\
 $rust\
 $elixir\
@@ -18,8 +18,6 @@ $julia\
 $haskell\
 $nim\
 $lua\
-[](fg:green bg:purple)\
-$time\
 [](fg:purple)
 $character
 """
@@ -31,8 +29,9 @@ error_symbol = "[](red)"
 [directory]
 style = "bg:blue fg:black"
 format = "[$path ]($style)"
-truncation_length = 1
-truncation_symbol = "ﱮ "
+truncation_length = 3
+truncation_symbol = "…/"
+
 
 [directory.substitutions]
 "Documents" = " "
@@ -42,19 +41,12 @@ truncation_symbol = "ﱮ "
 
 [git_branch]
 symbol = ""
-style = "bg:yellow fg:black"
+style = "bg:green fg:black"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:yellow fg:black"
-stashed = ""
+style = "bg:green fg:black"
 format = '[($all_status$ahead_behind )]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:purple fg:black"
-format = '[ 神$time ]($style)'
 
 [package]
 disabled = true
@@ -66,70 +58,70 @@ symbol = ""
 
 [conda]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [dart]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [elixir]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [elm]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [java]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [julia]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [nim]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [python]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [ruby]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [haskell]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [lua]
 symbol = ""
-style = "bg:green fg:black"
-format = '[[ $symbol ($version) ](bg:green fg:black)]($style)'
+style = "bg:purple fg:black"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
