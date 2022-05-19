@@ -14,16 +14,27 @@
     "workbench.colorCustomizations": {
       "editor.lineHighlightBorder": "#ffffff08",
       "editorCursor.foreground": "#ff0000",
-      "editorWhitespace.foreground": "#5c5c5c78"
+      "editorWhitespace.foreground": "#5c5c5c78",
+
+      // Disabling bracket pair colorization and leaving unexpected bracket color change
+      "editorBracketHighlight.foreground1": "#ECEFF4",
+      "editorBracketHighlight.foreground2": "#ECEFF4",
+      "editorBracketHighlight.foreground3": "#ECEFF4",
+      "editorBracketHighlight.foreground4": "#ECEFF4",
+      "editorBracketHighlight.foreground5": "#ECEFF4",
+      "editorBracketHighlight.foreground6": "#ECEFF4",
+      "editorBracketHighlight.unexpectedBracket.foreground": "#BF616A"
     },
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
 
   // Editor ------------------------------------------------------------------------------------------------------------
     "editor.suggest.showWords": false,
-    "editor.inlayHints.enabled": false,
+    "editor.inlayHints.enabled": "off",
     "editor.suggestSelection": "first",
     "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.lineHeight": 19,
+    "editor.fontSize": 13,
     "editor.insertSpaces": true,
     "editor.quickSuggestions": false,
     "editor.fontLigatures": true,
@@ -37,13 +48,12 @@
     "editor.tabSize": 4,
     "editor.rulers": [120],
     "editor.accessibilitySupport": "off",
-    "editor.lineHeight": 19,
-    "editor.fontSize": 13,
     "editor.minimap.enabled": false,
+    "editor.folding": false,
+    "editor.bracketPairColorization.enabled": true,
     "editor.unicodeHighlight.invisibleCharacters": false,
     "debug.javascript.autoAttachFilter": "disabled",
     "debug.allowBreakpointsEverywhere": true,
-    "editor.folding": false,
 
   // Terminal ----------------------------------------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
