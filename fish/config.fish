@@ -13,6 +13,17 @@ alias ls="exa --icons --group-directories-first"
 alias ll="ls --long --git --no-permissions --no-user"
 alias la="ll --all"
 alias tree="ls --tree"
+alias cat="bat --theme=Nord"
+alias grep="rg"
+
+# Functions ===================================================================
+function git_purge_merged
+    # The \* in regular expression is required to ignore the current branch
+    # because git prefixes it with a (*)
+    git branch --merged \
+    | grep -v "(^\*|master|main|dev|develop|staging|release|production)" \
+    | xargs git branch -d
+end
 
 # Colors ======================================================================
 set nord0 2e3440
