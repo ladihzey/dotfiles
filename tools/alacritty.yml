@@ -7,6 +7,10 @@ font:
   offset:
     x: 0
     y: 0 
+window:
+   dimensions:
+     columns: 100
+     lines: 20
 colors:
   primary:
     background: '0x2E3440'
