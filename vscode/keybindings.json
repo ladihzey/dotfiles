@@ -10,6 +10,16 @@
         "command": "whichkey.show",
         "when": "!inputFocus"
     },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 
 // Removed keybindings
     {

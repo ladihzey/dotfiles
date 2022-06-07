@@ -17,13 +17,15 @@
       "editorWhitespace.foreground": "#5c5c5c78",
 
       // Disabling bracket pair colorization and leaving unexpected bracket color change
-      "editorBracketHighlight.foreground1": "#ECEFF4",
-      "editorBracketHighlight.foreground2": "#ECEFF4",
-      "editorBracketHighlight.foreground3": "#ECEFF4",
-      "editorBracketHighlight.foreground4": "#ECEFF4",
-      "editorBracketHighlight.foreground5": "#ECEFF4",
-      "editorBracketHighlight.foreground6": "#ECEFF4",
-      "editorBracketHighlight.unexpectedBracket.foreground": "#BF616A"
+      "[Nord]": {
+        "editorBracketHighlight.foreground1": "#ECEFF4",
+        "editorBracketHighlight.foreground2": "#ECEFF4",
+        "editorBracketHighlight.foreground3": "#ECEFF4",
+        "editorBracketHighlight.foreground4": "#ECEFF4",
+        "editorBracketHighlight.foreground5": "#ECEFF4",
+        "editorBracketHighlight.foreground6": "#ECEFF4",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#BF616A"
+      },
     },
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -111,10 +113,6 @@
         "after": ["g", "k"]
       },
       {
-        "before": ["g", "p"],
-        "after": ["`", "[", "v", "`", "]"]
-      },
-      {
         "before": ["<"],
         "commands": ["editor.action.outdentLines"]
       },
@@ -135,6 +133,10 @@
       {
         "before": ["s"],
         "after": ["leader", "leader", "s"]
+      },
+      {
+          "before": ["p"],
+          "after": ["p", "g", "v", "y"]
       },
       {
         "before": ["<"],
