@@ -79,6 +79,7 @@
     "[md]": {
       "editor.wordWrap": "on"
     },
+    "rust-analyzer.checkOnSave.command": "clippy",
     "typescript.tsserver.log": "off",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
