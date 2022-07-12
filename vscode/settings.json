@@ -1,16 +1,16 @@
 {
   // General UI --------------------------------------------------------------------------------------------------------
-    "window.menuBarVisibility": "toggle",
     "window.zoomLevel": 2,
-    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "toggle",
     "workbench.editor.limit.enabled": true,
+    "workbench.colorTheme": "Nord",
+    "workbench.activityBar.visible": false,
     "workbench.editor.limit.value": 1,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.editor.showTabs": false,
     "workbench.tree.indent": 20,
     "workbench.localHistory.mergeWindow": 30,
-    "workbench.colorTheme": "Nord",
     "workbench.colorCustomizations": {
       "editor.lineHighlightBorder": "#ffffff08",
       "editorCursor.foreground": "#ff0000",
@@ -33,12 +33,16 @@
   // Editor ------------------------------------------------------------------------------------------------------------
     "editor.suggest.showWords": false,
     "editor.inlayHints.enabled": "off",
-    "editor.suggestSelection": "first",
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.lineHeight": 19,
     "editor.fontSize": 13,
     "editor.insertSpaces": true,
-    "editor.quickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.cursorBlinking": "solid",
@@ -154,63 +158,89 @@
 
   // Whichkey ----------------------------------------------------------------------------------------------------------
     "whichkey.sortOrder": "none",
+    "whichkey.showButtons": false,
+    "whichkey.showIcons": true,
     "whichkey.bindings": [
       {
         "key": "u",
-        "name": "$(book) User interface...",
+        "name": "User interface...",
+        "icon": "book",
         "type": "bindings",
         "bindings": [
           {
             "key": "e",
-            "name": "$(explorer-view-icon) Explorer",
+            "name": "Explorer",
+            "icon": "explorer-view-icon",
             "type": "command",
             "command": "workbench.view.explorer"
           },
           {
             "key": "x",
-            "name": "$(extensions-view-icon) Extensions",
+            "name": "Extensions",
+            "icon": "extensions-view-icon",
             "type": "command",
             "command": "workbench.view.extensions"
           },
           {
-            "key": "d",
-            "name": "$(debug-alt) Debugger",
-            "type": "command",
-            "command": "workbench.view.debug"
-          },
-          {
             "key": "g",
-            "name": "$(source-control-view-icon) Git",
+            "name": "Git",
+            "icon": "source-control-view-icon",
             "type": "command",
             "command": "workbench.scm.focus"
           },
           {
-            "key": "t",
-            "name": "$(test-view-icon) Tests",
+            "key": "G",
+            "name": "GitHub",
+            "icon": "github",
             "type": "command",
-            "command": "workbench.view.testing.focus"
+            "command": "pr:github.focus"
+          },
+          {
+            "key": "t",
+            "name": "Tests",
+            "icon": "test-view-icon",
+            "type": "command",
+            "command": "test-explorer.focus"
+          },
+          {
+            "key": "d",
+            "name": "Debug",
+            "icon": "debug-alt",
+            "type": "command",
+            "command": "workbench.view.debug"
+          },
+          {
+            "key": "D",
+            "name": " Docker",
+            "icon": "package",
+            "type": "command",
+            "command": "dockerContainers.focus",
           },
           {
             "key": "o",
-            "name": "$(outline-view-icon) Outline",
+            "name": "Outline",
+            "icon": "outline-view-icon",
             "type": "command",
             "command": "outline.focus"
           },
           {
             "key": "f",
-            "name": "$(fullscreen) Fullscreen",
+            "name": "Fullscreen",
+            "icon": "fullscreen",
             "type": "command",
             "command": "workbench.action.toggleFullScreen",
           },
           {
             "key": "z",
-            "name": "$(rocket) Zen mode",
+            "name": "Zen mode",
+            "icon": "rocket",
             "type": "command",
             "command": "workbench.action.toggleZenMode",
           },
           {
             "key": "m",
-            "name": "$(markdown) Markdown preview",
+            "name": "Markdown preview",
+            "icon": "markdown",
             "type": "command",
             "command": "markdown.showPreview",
             "when": "!notebookEditorFocused && editorLangId == 'markdown'"
@@ -219,25 +249,29 @@
       },
       {
         "key": "a",
-        "name": "$(lightbulb) Code actions...",
+        "name": "Code actions...",
+        "icon": "lightbulb",
         "type": "bindings",
         "bindings": [
           {
             "key": "r",
-            "name": "$(replace) Rename",
+            "name": "Rename",
+            "icon": "replace",
             "type": "command",
             "command": "editor.action.rename",
             "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly",
           },
           {
             "key": "q",
-            "name": "$(lightbulb-autofix) Quick Fix",
+            "name": "Quick Fix",
+            "icon": "lightbulb-autofix",
             "type": "command",
             "command": "editor.action.quickFix"
           },
           {
             "key": "h",
-            "name": "$(info) Hover Info",
+            "name": "Hover Info",
+            "icon": "info",
             "type": "command",
             "command": "editor.action.showHover"
           }
@@ -245,71 +279,83 @@
       },
       {
         "key": "w",
-        "name": "$(window) Window...",
+        "name": "Window...",
+        "icon": "window",
         "type": "bindings",
         "bindings": [
           {
             "key": "s",
-            "name": "$(split-horizontal) Split horizontal",
+            "name": "Split horizontal",
+            "icon": "split-horizontal",
             "type": "command",
             "command": "workbench.action.splitEditorRight"
           },
           {
             "key": "S",
-            "name": "$(split-vertical) Split vertical",
+            "name": "Split vertical",
+            "icon": "split-vertical",
             "type": "command",
             "command": "workbench.action.splitEditorDown"
           },
           {
             "key": "h",
-            "name": "$(triangle-left) Focus on left group",
+            "name": "Focus on left group",
+            "icon": "triangle-left",
             "type": "command",
             "command": "workbench.action.focusLeftGroup"
           },
           {
             "key": "j",
-            "name": "$(triangle-down) Focus on bottom group",
+            "name": "Focus on bottom group",
+            "icon": "triangle-down",
             "type": "command",
             "command": "workbench.action.focusBelowGroup"
           },
           {
             "key": "k",
-            "name": "$(triangle-up) Focus on top group",
+            "name": "Focus on top group",
+            "icon": "triangle-up",
             "type": "command",
             "command": "workbench.action.focusAboveGroup"
           },
           {
             "key": "l",
-            "name": "$(triangle-right) Focus on right group",
+            "name": "Focus on right group",
+            "icon": "triangle-right",
             "type": "command",
             "command": "workbench.action.focusRightGroup"
           },
           {
             "key": "m",
-            "name": "$(move) Move editor...",
+            "name": "Move editor...",
+            "icon": "move",
             "type": "bindings",
             "bindings": [
               {
                 "key": "h",
-                "name": "$(triangle-left) Move editor left",
+                "name": "Move editor left",
+                "icon": "triangle-left",
                 "type": "command",
                 "command": "workbench.action.moveActiveEditorGroupLeft"
               },
               {
                 "key": "j",
-                "name": "$(triangle-down) Move editor down",
+                "name": "Move editor down",
+                "icon": "triangle-down",
                 "type": "command",
                 "command": "workbench.action.moveActiveEditorGroupDown"
               },
               {
                 "key": "k",
-                "name": "$(triangle-up) Move editor up",
+                "name": "Move editor up",
+                "icon": "triangle-up",
                 "type": "command",
                 "command": "workbench.action.moveActiveEditorGroupUp"
               },
               {
                 "key": "l",
-                "name": "$(triangle-right) Move editor right",
+                "name": "Move editor right",
+                "icon": "triangle-right",
                 "type": "command",
                 "command": "workbench.action.moveActiveEditorGroupRight"
               }
@@ -319,35 +365,41 @@
       },
       {
         "key": "d",
-        "name": "$(debug-alt) Debugger...",
+        "name": "Debugger...",
+        "icon": "debug-alt",
         "type": "bindings",
         "bindings": [
           {
             "key": "b",
-            "name": "$(debug-breakpoint) Breakpoint",
+            "name": "Breakpoint",
+            "icon": "debug-breakpoint",
             "type": "command",
             "command": "editor.debug.action.toggleBreakpoint"
           },
           {
             "key": "B",
-            "name": "$(activate-breakpoints) Breakpoints...",
+            "name": "Breakpoints...",
+            "icon": "activate-breakpoints",
             "type": "bindings",
             "bindings": [
               {
                 "key": "b",
-                "name": "$(debug-breakpoint) Breakpoint",
+                "name": "Breakpoint",
+                "icon": "debug-breakpoint",
                 "type": "command",
                 "command": "editor.debug.action.toggleBreakpoint"
               },
               {
                 "key": "c",
-                "name": "$(debug-breakpoint-function) Conditional Breakpoint",
+                "name": "Conditional Breakpoint",
+                "icon": "debug-breakpoint-function",
                 "type": "command",
                 "command": "editor.debug.action.conditionalBreakpoint"
               },
               {
                 "key": "l",
-                "name": "$(debug-breakpoint-log) Log Point",
+                "name": "Log Point",
+                "icon": "debug-breakpoint-log",
                 "type": "command",
                 "command": "editor.debug.action.addLogPoint"
               }
@@ -355,7 +407,8 @@
           },
           {
             "key": "h",
-            "name": "$(info) Hover Info",
+            "name": "Hover Info",
+            "icon": "info",
             "type": "command",
             "command": "editor.debug.action.showDebugHover"
           }
@@ -363,26 +416,30 @@
       },
       {
         "key": "g",
-        "name": "$(source-control) Git...",
+        "name": "Git...",
+        "icon": "source-control",
         "type": "bindings",
         "bindings": [
           {
             "key": "r",
-            "name": "$(discard) Revert selected",
+            "name": "Revert selected",
+            "icon": "discard",
             "type": "command",
             "command": "git.revertSelectedRanges",
             "when": "isInDiffEditor"
           },
           {
             "key": "s",
-            "name": "$(diff-added) Stage selected",
+            "name": "Stage selected",
+            "icon": "diff-added",
             "type": "command",
             "command": "git.stageSelectedRanges",
             "when": "isInDiffEditor"
           },
           {
             "key": "S",
-            "name": "$(diff-removed) Unstage selected",
+            "name": "Unstage selected",
+            "icon": "diff-removed",
             "type": "command",
             "command": "git.unstageSelectedRanges",
             "when": "isInDiffEditor"
@@ -391,42 +448,49 @@
       },
       {
         "key": " ",
-        "name": "$(arrow-both) Navigate to...",
+        "name": "Navigate to...",
+        "icon": "arrow-both",
         "type": "bindings",
         "bindings": [
           {
             "key": "t",
-            "name": "$(test-view-icon) Go to spec/implementation",
+            "name": "Go to spec/implementation",
+            "icon": "test-view-icon",
             "type": "command",
             "command": "extension.goToSpec"
           },
           {
             "key": "o",
-            "name": "$(link) Open link",
+            "name": "Open link",
+            "icon": "link",
             "type": "command",
             "command": "editor.action.openLink"
           },
           {
             "key": "r",
-            "name": "$(references) Go to references",
+            "name": "Go to references",
+            "icon": "references",
             "type": "command",
             "command": "editor.action.referenceSearch.trigger"
           },
           {
             "key": "d",
-            "name": "$(symbol-interface) Go to definition",
+            "name": "Go to definition",
+            "icon": "symbol-interface",
             "type": "command",
             "command": "editor.action.revealDefinition"
           },
           {
             "key": "s",
-            "name": "$(symbol-function) Go to symbol",
+            "name": "Go to symbol",
+            "icon": "symbol-function",
             "type": "command",
             "command": "workbench.action.gotoSymbol",
           },
           {
             "key": "b",
-            "name": "$(history) Go back",
+            "name": "Go back",
+            "icon": "history",
             "type": "command",
             "command": "workbench.action.navigateBack",
           }
@@ -434,19 +498,22 @@
       },
       {
         "key": "c",
-        "name": "$(symbol-parameter) Comment",
+        "name": "Comment",
+        "icon": "symbol-parameter",
         "type": "command",
         "command": "editor.action.commentLine"
       },
       {
         "key": "f",
-        "name": "$(file) Open file",
+        "name": "Open file",
+        "icon": "file",
         "type": "command",
         "command": "workbench.action.files.openFile",
       },
       {
         "key": "F",
-        "name": "$(file-directory) Open folder",
+        "name": "Open folder",
+        "icon": "file-directory",
         "type": "command",
         "command": "workbench.action.files.openFolder",
       }
@@ -454,7 +521,9 @@
   
   // Misc---------------------------------------------------------------------------------------------------------------
     "files.autoSave": "afterDelay",
-    "timeline.excludeSources": [],
+    "timeline.excludeSources": [
+      "timeline.localHistory"
+    ],
     "telemetry.telemetryLevel": "off",
     "security.workspace.trust.untrustedFiles": "open",
     "extensions.autoUpdate": false,
