@@ -1,0 +1,149 @@
+format = """
+[](fg:blue)\
+$directory\
+[](bg:green fg:blue)\
+$git_branch\
+$git_status\
+[](fg:green bg:purple)\
+$rust\
+$elixir\
+$ruby\
+$python\
+$conda\
+$nodejs\
+$dart\
+$elm\
+$golang\
+$java\
+$julia\
+$haskell\
+$nim\
+$lua\
+[](fg:purple)\
+$cmd_duration
+$character
+"""
+
+[cmd_duration]
+format = " [ $duration]($style)"
+style = "fg:yellow"
+
+[character]
+success_symbol = "[](blue)"
+error_symbol = "[](red)"
+
+[directory]
+style = "bg:blue fg:black"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Projects" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:green fg:black"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:green fg:black"
+format = '[($all_status$ahead_behind )]($style)'
+
+[package]
+disabled = true
+symbol = ""
+
+[aws]
+disabled = true
+symbol = ""
+
+[conda]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[dart]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[elixir]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[elm]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[java]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[julia]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[nim]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[python]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[ruby]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[lua]
+symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+

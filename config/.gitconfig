@@ -1,0 +1,10 @@
+[core]
+	editor = nvim
+[alias]
+	amend = "commit --amend --no-edit"
+	lg = "log --abbrev-commit --pretty=oneline"
+	wip = "!f() { git add --all; git commit -m 'WIP' --no-verify; }; f"
+[push]
+	default = current
+[init]
+	defaultBranch = main
