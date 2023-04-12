@@ -8,3 +8,6 @@
 	default = current
 [init]
 	defaultBranch = main
+[user]
+	name = ladihzey
+	email = ladihzey@proton.me
