@@ -5,10 +5,7 @@ sh <(curl -L https://nixos.org/nix/install) --no-daemon
 . ~/.nix-profile/etc/profile.d/nix.sh
 
 # Install packages
-export NIXPKGS_ALLOW_UNFREE=1
 nix-env -iA \
-    nixpkgs.dbeaver \
-    nixpkgs.vscode \
     nixpkgs.alacritty \
     nixpkgs.neovim \
     nixpkgs.fish \
@@ -40,18 +37,4 @@ stow config
 # Set fish as a default shell
 echo $(which fish) | sudo tee -a /etc/shells
 chsh -s $(which fish)
-
-# Install VSCode extensions
-code --install-extensions \
-    arcticicestudio.nord-visual-studio-code \
-    bmalehorn.vscode-fish \
-    bungcip.better-toml \
-    EditorConfig.EditorConfig \
-    helgardrichard.helium-icon-theme \
-    rust-lang.rust-analyzer \
-    streetsidesoftware.code-spell-checker \
-    streetsidesoftware.code-spell-checker-russian \
-    vadimcn.vscode-lldb \
-    vscodevim.vim \
-    VSpaceCode.whichkey
 
