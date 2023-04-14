@@ -18,7 +18,8 @@ nix-env -iA \
     nixpkgs.ripgrep \
     nixpkgs.stow \
     nixpkgs.zellij \
-    nixpkgs.bottom
+    nixpkgs.bottom \
+    nixpkgs.zoxide
 
 # Install asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf

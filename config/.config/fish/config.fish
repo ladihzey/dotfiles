@@ -8,6 +8,7 @@ set -U ASDF_CONFIG_FILE $HOME/.config/.asdfrc
 
 # Utilities ===================================================================
 starship init fish | source
+zoxide init fish | source
 source ~/.asdf/asdf.fish
 
 # Aliases =====================================================================
