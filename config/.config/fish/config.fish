@@ -34,4 +34,3 @@ function envsource
     echo "Exported key $item[1]"
   end
 end
-

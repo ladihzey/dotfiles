@@ -24,8 +24,8 @@
       "editorBracketHighlight.foreground4": "#ECEFF4",
       "editorBracketHighlight.foreground5": "#ECEFF4",
       "editorBracketHighlight.foreground6": "#ECEFF4",
-      "editorBracketHighlight.unexpectedBracket.foreground": "#BF616A",
-    },
+      "editorBracketHighlight.unexpectedBracket.foreground": "#BF616A"
+    }
   },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -42,7 +42,7 @@
     ".gitignore": ".gitattributes",
     "Gemfile": "Brewfile*, Rakefile*, Gemfile*, .ruby-version, .rubocop*, .rspec, .foreman, config.ru",
     "Pipfile": "Pipfile*, requirements.txt",
-    "README.md": "*.md, LICENSE",
+    "README.md": "*.md, LICENSE"
   },
 
 // ======================================================================================
@@ -76,11 +76,11 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.minimap.enabled": false,
-  "debug.javascript.autoAttachFilter": "disabled",
   "debug.onTaskErrors": "abort",
-  "debug.allowBreakpointsEverywhere": true,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  "debug.javascript.autoAttachFilter": "disabled",
+  "debug.allowBreakpointsEverywhere": true,
 
 // ======================================================================================
 // Terminal
@@ -106,13 +106,16 @@
   "[ruby]": {
     "editor.tabSize": 2
   },
+  "[rust]": {
+    "editor.formatOnSave": true
+  },
+  "rust-analyzer.check.command": "clippy",
+  "[python]": {
+    "editor.tabSize": 4
+  },
   "[md]": {
     "editor.wordWrap": "on"
   },
-  "[rust]": {
-    "editor.formatOnSave": true,
-  },
-  "rust-analyzer.check.command": "clippy",
   "typescript.tsserver.log": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -204,21 +207,21 @@
       "name": "Show all commands",
       "icon": "keyboard",
       "type": "command",
-      "command": "workbench.action.showCommands",
+      "command": "workbench.action.showCommands"
     },
     {
       "key": "p",
       "name": "Find in project",
       "icon": "zap",
       "type": "command",
-      "command": "workbench.action.quickOpen",
+      "command": "workbench.action.quickOpen"
     },
     {
       "key": "s",
       "name": "Open settings",
       "icon": "gear",
       "type": "command",
-      "command": "workbench.action.openSettingsJson",
+      "command": "workbench.action.openSettingsJson"
     },
     {
       "key": "u",
@@ -273,7 +276,7 @@
           "name": " Docker",
           "icon": "package",
           "type": "command",
-          "command": "dockerContainers.focus",
+          "command": "dockerContainers.focus"
         },
         {
           "key": "o",
@@ -287,14 +290,14 @@
           "name": "Fullscreen",
           "icon": "fullscreen",
           "type": "command",
-          "command": "workbench.action.toggleFullScreen",
+          "command": "workbench.action.toggleFullScreen"
         },
         {
           "key": "z",
           "name": "Zen mode",
           "icon": "rocket",
           "type": "command",
-          "command": "workbench.action.toggleZenMode",
+          "command": "workbench.action.toggleZenMode"
         },
         {
           "key": "m",
@@ -303,7 +306,7 @@
           "type": "command",
           "command": "markdown.showPreview",
           "when": "!notebookEditorFocused && editorLangId == 'markdown'"
-        },
+        }
       ]
     },
     {
@@ -318,7 +321,7 @@
           "icon": "replace",
           "type": "command",
           "command": "editor.action.rename",
-          "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly",
+          "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
         },
         {
           "key": "q",
@@ -361,7 +364,7 @@
           "name": "Close editor",
           "icon": "trash",
           "type": "command",
-          "command": "workbench.action.closeActiveEditor",
+          "command": "workbench.action.closeActiveEditor"
         },
         {
           "key": "h",
@@ -508,7 +511,7 @@
           "type": "command",
           "command": "workbench.action.debug.continue",
           "when": "debugState == 'stopped'"
-        },
+        }
       ]
     },
     {
@@ -540,8 +543,8 @@
           "type": "command",
           "command": "git.unstageSelectedRanges",
           "when": "isInDiffEditor"
-        },
-      ],
+        }
+      ]
     },
     {
       "key": " ",
@@ -582,14 +585,14 @@
           "name": "Go to symbol",
           "icon": "symbol-function",
           "type": "command",
-          "command": "workbench.action.gotoSymbol",
+          "command": "workbench.action.gotoSymbol"
         },
         {
           "key": "b",
           "name": "Go back",
           "icon": "history",
           "type": "command",
-          "command": "workbench.action.navigateBack",
+          "command": "workbench.action.navigateBack"
         }
       ]
     },
@@ -605,15 +608,15 @@
       "name": "Open file",
       "icon": "file",
       "type": "command",
-      "command": "workbench.action.files.openFile",
+      "command": "workbench.action.files.openFile"
     },
     {
       "key": "F",
       "name": "Open folder",
       "icon": "file-directory",
       "type": "command",
-      "command": "workbench.action.files.openFolder",
-    },
+      "command": "workbench.action.files.openFolder"
+    }
   ],
 
 // ======================================================================================
@@ -630,7 +633,8 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!",
   "errorLens.excludeBySource": ["cSpell"],
   "cSpell.language": "en,ru-RU",
+  "livePreview.notifyOnOpenLooseFile": false,
   "cSpell.userWords": [
     "whitespaces"
-  ],
+  ]
 }
