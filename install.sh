@@ -1,27 +1,19 @@
-# Installing nix
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
-
-# Sourcing nix
-. ~/.nix-profile/etc/profile.d/nix.sh
+# Install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install packages
-nix-env -iA \
-    nixpkgs.alacritty \
-    nixpkgs.neovim \
-    nixpkgs.fish \
-    nixpkgs.exa \
-    nixpkgs.bat \
-    nixpkgs.starship \
-    nixpkgs.ripgrep \
-    nixpkgs.stow \
-    nixpkgs.zellij \
-    nixpkgs.bottom \
-    nixpkgs.zoxide
-
-# Install asdf
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-mkdir -p ~/.config/fish/completions
-ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+brew install \
+    fish \
+    asdf \
+    neovim \
+    exa \
+    bat \
+    starship \
+    ripgrep \
+    stow \
+    zellij \
+    bottom \
+    zoxide
 
 # Install NodeJS
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git

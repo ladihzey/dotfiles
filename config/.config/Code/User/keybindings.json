@@ -1,0 +1,225 @@
+[
+    {
+        "key": "shift+cmd+s",
+        "command": "workbench.action.files.saveAll"
+    },
+    {
+        "key": "space",
+        "command": "whichkey.show",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+
+// ======================================================================================
+// Removed keybindings
+// ======================================================================================
+    {
+        "key": "cmd+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "cmd+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "cmd+shift+e",
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "cmd+shift+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "cmd+shift+x",
+        "command": "-workbench.view.extensions",
+        "when": "viewContainer.workbench.view.extensions.enabled"
+    },
+    {
+        "key": "cmd+shift+d",
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+k cmd+shift+\\",
+        "command": "-workbench.action.splitEditorInGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "cmd+k cmd+\\",
+        "command": "-workbench.action.splitEditorOrthogonal"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-list.focusPageDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+    },
+    {
+        "key": "cmd+k cmd+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "cmd+k cmd+right",
+        "command": "-workbench.action.focusRightGroup"
+    },
+    {
+        "key": "cmd+k cmd+up",
+        "command": "-workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "cmd+k cmd+down",
+        "command": "-workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "cmd+shift+t",
+        "command": "-extension.goToSpec",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+cmd+f",
+        "command": "-workbench.action.toggleFullScreen",
+        "when": "!isIOS"
+    },
+    {
+        "key": "cmd+k left",
+        "command": "-workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+        "key": "cmd+k up",
+        "command": "-workbench.action.moveActiveEditorGroupUp"
+    },
+    {
+        "key": "cmd+k right",
+        "command": "-workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+        "key": "cmd+k down",
+        "command": "-workbench.action.moveActiveEditorGroupDown"
+    },
+    {
+        "key": "cmd+k cmd+alt+s",
+        "command": "-git.stageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "cmd+k cmd+n",
+        "command": "-git.unstageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "cmd+k cmd+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "escape escape",
+        "command": "-workbench.action.exitZenMode",
+        "when": "inZenMode"
+    },
+    {
+        "key": "cmd+k z",
+        "command": "-workbench.action.toggleZenMode"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFolderViaWorkspace",
+        "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFileFolder",
+        "when": "isMacNative && openFolderWorkspaceSupport"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFile",
+        "when": "true"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openLocalFile",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openLocalFolder",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "cmd+k o",
+        "command": "-workbench.action.files.showOpenedFileInNewWindow",
+        "when": "emptyWorkspaceSupport"
+    },
+    {
+        "key": "cmd+o",
+        "command": "-workbench.action.files.openFolder",
+        "when": "openFolderWorkspaceSupport"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+shift+o",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-markdown.showPreview",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "-workbench.action.showCommands"
+    },
+]
