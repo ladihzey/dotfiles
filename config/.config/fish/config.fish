@@ -4,13 +4,15 @@ set -U HOMEBREW /home/linuxbrew/.linuxbrew
 set -U fish_greeting
 set -U fish_user_paths \
     $HOME/.asdf/bin \
+    $HOME/.local/bin \
     $HOME/.cargo/bin \
     $HOMEBREW/bin \
     $fish_user_paths
 
-# Utilities ===================================================================
+# Sourcing Configs ============================================================
 starship init fish | source
-zoxide init fish | source
+zoxide init fish --cmd jp | source
+
 source $HOMEBREW/opt/asdf/libexec/asdf.fish
 source $HOME/.config/fish/nord-theme.fish
 
