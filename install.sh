@@ -3,16 +3,20 @@
 
 # Install packages
 brew install \
-    fish \
     asdf \
-    neovim \
-    exa \
     bat \
-    starship \
-    ripgrep \
-    stow \
-    zellij \
     bottom \
+    exa \
+    fd \
+    fish \
+    fzf \
+    lazygit \
+    neovim \
+    ripgrep \
+    starship \
+    stow \
+    thefuck \
+    zellij \
     zoxide
 
 # Install NodeJS
