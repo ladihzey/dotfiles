@@ -34,7 +34,7 @@
     "*.ts": "${capture}.spec.ts",
     "*.tsx": "${capture}.tests.tsx",
     "next.config.js": "next*",
-    "package.json": ".nvmrc, yarn*, *.js, *.ts, jest*, .prettier*, .lintstaged*, .eslint*, coffeelint*, cypress*, relay*, tsconfig*, .swc*, babel*, package*",
+    "package.json": ".nvmrc, yarn*, pnpm*, jest*, .sequelize*, .prettier*, .lintstaged*, .eslint*, coffeelint*, cypress*, relay*, tsconfig*, .swc*, babel*, package*",
     ".env": ".env*, .secrets.baseline",
     "Dockerfile": ".dockerignore, docker-compose*",
     ".gitignore": ".gitattributes",
@@ -46,12 +46,12 @@
 // ======================================================================================
 // Editor
 // ======================================================================================
-  "editor.suggest.showWords": false,
   "editor.inlayHints.enabled": "off",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.lineHeight": 20,
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
+  "editor.suggest.showWords": false,
   "editor.suggestSelection": "first",
   "editor.quickSuggestions": {
     "comments": "on",
@@ -79,7 +79,7 @@
 // Terminal
 // ======================================================================================
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.localEchoLatencyThreshold": -1,
   "terminal.integrated.defaultProfile.osx": "fish",

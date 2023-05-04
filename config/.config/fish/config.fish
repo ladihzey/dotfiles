@@ -24,6 +24,8 @@ alias la="ll --all"
 alias tree="ls --tree"
 alias cat="bat --theme=Nord"
 alias grep="rg"
+alias python="python3"
+alias pip="pip3"
 
 function envsource
   for line in (cat $argv | grep -v '^#')
