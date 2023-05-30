@@ -1,4 +1,6 @@
 {
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 2,
   "workbench.editor.limit.enabled": true,
   "workbench.colorTheme": "Nord",
   "workbench.iconTheme": "helium-icon-theme",
@@ -72,8 +74,13 @@
   "editor.folding": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.minimap.enabled": false,
   "debug.javascript.autoAttachFilter": "disabled",
+  "debug.onTaskErrors": "abort",
   "debug.allowBreakpointsEverywhere": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
 
 // ======================================================================================
 // Terminal
@@ -99,12 +106,13 @@
   "[ruby]": {
     "editor.tabSize": 2
   },
-  "[python]": {
-    "editor.tabSize": 4
-  },
   "[md]": {
     "editor.wordWrap": "on"
   },
+  "[rust]": {
+    "editor.formatOnSave": true,
+  },
+  "rust-analyzer.check.command": "clippy",
   "typescript.tsserver.log": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -614,20 +622,15 @@
   "files.autoSave": "afterDelay",
   "telemetry.telemetryLevel": "off",
   "security.workspace.trust.untrustedFiles": "open",
+  "update.mode": "manual",
   "extensions.autoUpdate": false,
   "extensions.ignoreRecommendations": true,
   "testing.automaticallyOpenPeekViewDuringAutoRun": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!",
+  "errorLens.excludeBySource": ["cSpell"],
   "cSpell.language": "en,ru-RU",
-  "livePreview.notifyOnOpenLooseFile": false,
-  "update.mode": "manual",
   "cSpell.userWords": [
     "whitespaces"
   ],
-  "window.zoomLevel": 2,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "editor.minimap.enabled": false,
-  "window.menuBarVisibility": "toggle",
 }

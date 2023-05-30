@@ -34,3 +34,22 @@ stow config
 echo $(which fish) | sudo tee -a /etc/shells
 chsh -s $(which fish)
 
+# Install vscode extensions
+code --install-extension \
+    arcticicestudio.nord-visual-studio-code \
+    bmalehorn.vscode-fish \
+    bungcip.better-toml \
+    EditorConfig.EditorConfig \
+    Gruntfuggly.todo-tree \
+    helgardrichard.helium-icon-theme \
+    mikestead.dotenv \
+    rust-lang.rust-analyzer \
+    serayuzgur.crates \
+    streetsidesoftware.code-spell-checker \
+    streetsidesoftware.code-spell-checker-russian \
+    usernamehw.errorlens \
+    vadimcn.vscode-lldb \
+    vscodevim.vim \
+    VSpaceCode.whichkey \
+    waderyan.gitblame
+
