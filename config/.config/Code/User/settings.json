@@ -1,10 +1,7 @@
 {
-  "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 2,
   "workbench.editor.limit.enabled": true,
   "workbench.colorTheme": "Nord",
   "workbench.iconTheme": "helium-icon-theme",
-  "workbench.activityBar.visible": false,
   "workbench.editor.limit.value": 1,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.startupEditor": "newUntitledFile",
@@ -27,6 +24,8 @@
       "editorBracketHighlight.unexpectedBracket.foreground": "#BF616A"
     }
   },
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 1,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
@@ -34,9 +33,9 @@
   "explorer.fileNesting.patterns": {
     "Cargo.toml": "Cargo*",
     "*.ts": "${capture}.spec.ts",
-    "*.tsx": "${capture}.tests.tsx",
+    "*.tsx": "${capture}.tests.tsx, ${capture}.*ss",
     "next.config.js": "next*",
-    "package.json": ".nvmrc, yarn*, pnpm*, jest*, .sequelize*, .prettier*, .lintstaged*, .eslint*, coffeelint*, cypress*, relay*, tsconfig*, .swc*, babel*, package*",
+    "package.json": ".nvmrc, yarn*, pnpm*, jest*, svelte*, vite*, .sequelize*, .prettier*, .lintstaged*, .eslint*, coffeelint*, cypress*, relay*, tsconfig*, .swc*, babel*, package*",
     ".env": ".env*, .secrets.baseline",
     "Dockerfile": ".dockerignore, docker-compose*",
     ".gitignore": ".gitattributes",
@@ -77,6 +76,8 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.minimap.enabled": false,
   "debug.onTaskErrors": "abort",
+  "files.eol": "\n",
+  "files.autoSave": "afterDelay",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "debug.javascript.autoAttachFilter": "disabled",
@@ -106,20 +107,20 @@
   "[ruby]": {
     "editor.tabSize": 2
   },
-  "[rust]": {
-    "editor.formatOnSave": true
-  },
-  "rust-analyzer.check.command": "clippy",
   "[python]": {
     "editor.tabSize": 4
   },
   "[md]": {
     "editor.wordWrap": "on"
   },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
   "typescript.tsserver.log": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "files.eol": "\n",
+  "rust-analyzer.check.command": "clippy",
 
 // ======================================================================================
 // VIM
@@ -622,7 +623,6 @@
 // ======================================================================================
 // Misc
 // ======================================================================================
-  "files.autoSave": "afterDelay",
   "telemetry.telemetryLevel": "off",
   "security.workspace.trust.untrustedFiles": "open",
   "update.mode": "manual",
@@ -633,8 +633,9 @@
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!",
   "errorLens.excludeBySource": ["cSpell"],
   "cSpell.language": "en,ru-RU",
-  "livePreview.notifyOnOpenLooseFile": false,
   "cSpell.userWords": [
+    "Whichkey",
     "whitespaces"
-  ]
+  ],
+  "helium-icon-theme.hidesExplorerArrows": true
 }
