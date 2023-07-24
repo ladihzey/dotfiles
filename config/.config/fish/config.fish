@@ -1,8 +1,8 @@
-set -U ASDF_CONFIG_FILE $HOME/.config/.asdfrc
-set -U HOMEBREW /home/linuxbrew/.linuxbrew
+set -Ux ASDF_CONFIG_FILE $HOME/.config/.asdfrc
+set -Ux HOMEBREW /home/linuxbrew/.linuxbrew
 
-set -U fish_greeting
-set -U fish_user_paths \
+set -Ux fish_greeting
+set -Ux fish_user_paths \
     $HOME/.asdf/bin \
     $HOME/.local/bin \
     $HOME/.cargo/bin \

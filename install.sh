@@ -4,12 +4,15 @@
 # Install packages
 brew install \
     asdf \
+    awscli \
     bat \
     bottom \
+    dust \
     exa \
     fd \
     fish \
     fzf \
+    httpie \
     lazygit \
     neovim \
     ripgrep \
@@ -37,19 +40,29 @@ chsh -s $(which fish)
 # Install vscode extensions
 code --install-extension \
     arcticicestudio.nord-visual-studio-code \
+    bibhasdn.unique-lines \
     bmalehorn.vscode-fish \
+    bradlc.vscode-tailwindcss \
+    bram209.leptos-language-server \
     bungcip.better-toml \
     EditorConfig.EditorConfig \
+    emilast.LogFileHighlighter \
+    github.vscode-github-actions \
+    GrapeCity.gc-excelviewer \
     Gruntfuggly.todo-tree \
     helgardrichard.helium-icon-theme \
     mikestead.dotenv \
+    ms-python.python \
+    ms-python.vscode-pylance \
+    ms-vscode.live-server \
     rust-lang.rust-analyzer \
     serayuzgur.crates \
     streetsidesoftware.code-spell-checker \
     streetsidesoftware.code-spell-checker-russian \
+    tamasfe.even-better-toml \
     usernamehw.errorlens \
     vadimcn.vscode-lldb \
     vscodevim.vim \
     VSpaceCode.whichkey \
-    waderyan.gitblame
-
+    waderyan.gitblame \
+    yoavbls.pretty-ts-errors

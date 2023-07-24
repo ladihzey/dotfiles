@@ -1,4 +1,5 @@
 {
+  "workbench.activityBar.visible": false,
   "workbench.editor.limit.enabled": true,
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.editor.limit.value": 1,
@@ -26,7 +27,7 @@
     }
   },
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
@@ -653,5 +654,4 @@
     "whitespaces"
   ],
   "diffEditor.maxComputationTime": 0,
-  "workbench.activityBar.visible": false,
 }
