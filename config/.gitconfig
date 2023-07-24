@@ -1,5 +1,6 @@
 [core]
 	editor = nvim
+	excludesfile = ~/.gitignore
 [alias]
 	amend = "commit --amend --no-edit"
 	lg = "log --abbrev-commit --pretty=oneline"

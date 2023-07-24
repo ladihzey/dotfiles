@@ -1,6 +1,5 @@
 {
   "workbench.editor.limit.enabled": true,
-  "workbench.colorTheme": "Nord",
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.editor.limit.value": 1,
   "workbench.editor.limit.perEditorGroup": true,
@@ -8,13 +7,15 @@
   "workbench.editor.showTabs": false,
   "workbench.tree.indent": 20,
   "workbench.localHistory.mergeWindow": 30,
+  "helium-icon-theme.hidesExplorerArrows": true,
+  "workbench.colorTheme": "Nord",
   "workbench.colorCustomizations": {
     "editor.lineHighlightBorder": "#ffffff08",
     "editorCursor.foreground": "#ff0000",
     "editorWhitespace.foreground": "#5c5c5c78",
 
-    // Disabling bracket pair colorization and leaving unexpected bracket color change
     "[Nord]": {
+      // Disable bracket pair colorization, but keep unexpected bracket color
       "editorBracketHighlight.foreground1": "#ECEFF4",
       "editorBracketHighlight.foreground2": "#ECEFF4",
       "editorBracketHighlight.foreground3": "#ECEFF4",
@@ -35,7 +36,7 @@
     "*.ts": "${capture}.spec.ts",
     "*.tsx": "${capture}.tests.tsx, ${capture}.*ss",
     "next.config.js": "next*",
-    "package.json": ".nvmrc, yarn*, pnpm*, jest*, svelte*, vite*, .sequelize*, .prettier*, .lintstaged*, .eslint*, coffeelint*, cypress*, relay*, tsconfig*, .swc*, babel*, package*",
+    "package.json": "vite*, .nvmrc, yarn*, pnpm*, jest*, .sequelize*, .prettier*, .lintstaged*, .eslint*, coffeelint*, cypress*, relay*, tsconfig*, .swc*, babel*, package*",
     ".env": ".env*, .secrets.baseline",
     "Dockerfile": ".dockerignore, docker-compose*",
     ".gitignore": ".gitattributes",
@@ -43,21 +44,18 @@
     "Pipfile": "Pipfile*, requirements.txt",
     "README.md": "*.md, LICENSE"
   },
-
-// ======================================================================================
-// Editor
-// ======================================================================================
-  "editor.inlayHints.enabled": "off",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.inlayHints.fontSize": 10,
+  "editor.inlayHints.padding": true,
   "editor.lineHeight": 20,
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.suggest.showWords": false,
   "editor.suggestSelection": "first",
   "editor.quickSuggestions": {
+    "other": "on",
     "comments": "on",
-    "strings": "off",
-    "other": "on"
+    "strings": true,
   },
   "editor.fontLigatures": true,
   "editor.renderWhitespace": "all",
@@ -66,7 +64,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.glyphMargin": true,
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "off",
   "editor.tabSize": 4,
   "editor.rulers": [120],
   "editor.accessibilitySupport": "off",
@@ -76,12 +74,14 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.minimap.enabled": false,
   "debug.onTaskErrors": "abort",
-  "files.eol": "\n",
-  "files.autoSave": "afterDelay",
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
   "debug.javascript.autoAttachFilter": "disabled",
   "debug.allowBreakpointsEverywhere": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "search.useGlobalIgnoreFiles": true,
 
 // ======================================================================================
 // Terminal
@@ -119,8 +119,23 @@
   },
   "typescript.tsserver.log": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "rust-analyzer.check.command": "clippy",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "emmet.includeLanguages": {
+    "rust": "html",
+    "*.rs": "html",
+  },
+  "tailwindCSS.includeLanguages": {
+    "rust": "html",
+    "*.rs": "html",
+  },
+  "files.associations": {
+    "*.rs": "rust",
+  },
+  "css.validate": false,
 
 // ======================================================================================
 // VIM
@@ -637,5 +652,6 @@
     "Whichkey",
     "whitespaces"
   ],
-  "helium-icon-theme.hidesExplorerArrows": true
+  "diffEditor.maxComputationTime": 0,
+  "workbench.activityBar.visible": false,
 }

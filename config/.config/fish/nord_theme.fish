@@ -1,5 +1,23 @@
-source $HOME/.config/fish/nord-colors.fish
+# Color Pallete
 
+set nord0 2e3440
+set nord1 3b4252
+set nord2 434c5e
+set nord3 4c566a
+set nord4 d8dee9
+set nord5 e5e9f0
+set nord6 eceff4
+set nord7 8fbcbb
+set nord8 88c0d0
+set nord9 81a1c1
+set nord10 5e81ac
+set nord11 bf616a
+set nord12 d08770
+set nord13 ebcb8b
+set nord14 a3be8c
+set nord15 b48ead
+
+# Theme
 set -g fish_color_normal $nord4
 set -g fish_color_command $nord9
 set -g fish_color_quote $nord14
@@ -22,3 +40,19 @@ set -g fish_pager_color_completion $nord6
 set -g fish_pager_color_description $nord10
 set -g fish_pager_color_progress $nord12
 set -g fish_pager_color_secondary $nord1
+
+# FZF Theme
+set -Ux FZF_DEFAULT_OPTS \
+    $FZF_DEFAULT_OPTS \
+    "--color=fg:#$nord5" \
+    "--color=bg:#$nord0" \
+    "--color=hl:#$nord9" \
+    "--color=fg+:#$nord5" \
+    "--color=bg+:#$nord1" \
+    "--color=hl+:#$nord9" \
+    "--color=info:#$nord13" \
+    "--color=prompt:#$nord11" \
+    "--color=pointer:#$nord15" \
+    "--color=marker:#$nord14" \
+    "--color=spinner:#$nord15" \
+    "--color=header:#$nord14"
