@@ -55,4 +55,5 @@ set -Ux FZF_DEFAULT_OPTS \
     "--color=pointer:#$nord15" \
     "--color=marker:#$nord14" \
     "--color=spinner:#$nord15" \
-    "--color=header:#$nord14"
+    "--color=header:#$nord14" \
+    "--color=border:#$nord1"

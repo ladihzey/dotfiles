@@ -3,18 +3,18 @@ set -Ux HOMEBREW /home/linuxbrew/.linuxbrew
 
 set -Ux fish_greeting
 set -Ux fish_user_paths \
+    $fish_user_paths \
     $HOME/.asdf/bin \
     $HOME/.local/bin \
     $HOME/.cargo/bin \
-    $HOMEBREW/bin \
-    $fish_user_paths
+    $HOMEBREW/bin
 
 # Sourcing Configs ============================================================
 starship init fish | source
 zoxide init fish --cmd jp | source
 
 source $HOMEBREW/opt/asdf/libexec/asdf.fish
-source $HOME/.config/fish/nord_theme.fish
+source $HOME/.config/fish/nord-theme.fish
 
 # Aliases =====================================================================
 alias md="mkdir"
@@ -23,6 +23,7 @@ alias ll="ls --long --git --no-permissions --no-user"
 alias la="ll --all"
 alias tree="ls --tree"
 alias cat="bat --theme=Nord"
+alias find="fd"
 alias grep="rg"
 alias python="python3"
 alias pip="pip3"
