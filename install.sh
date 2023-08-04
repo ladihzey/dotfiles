@@ -20,7 +20,11 @@ brew install \
     stow \
     thefuck \
     zellij \
-    zoxide
+    zoxide \
+    just \
+    lf \
+    neofetch \
+    watchexec
 
 # Install NodeJS
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
