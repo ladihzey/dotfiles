@@ -27,7 +27,7 @@
     }
   },
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
