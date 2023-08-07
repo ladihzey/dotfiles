@@ -17,6 +17,8 @@ source $HOMEBREW/opt/asdf/libexec/asdf.fish
 source $HOME/.config/fish/nord-theme.fish
 
 # Aliases =====================================================================
+source $HOME/.config/fish/private/communion-aliases.fish
+
 alias md="mkdir"
 alias ls="exa --icons --group-directories-first"
 alias ll="ls --long --git --no-permissions --no-user"
@@ -28,5 +30,3 @@ alias grep="rg"
 alias python="python3"
 alias pip="pip3"
 
-alias communion-stg="ssh -i ~/.ssh/communion_staging_key.pem ubuntu@apistaging.joincommunion.xyz"
-alias communion-prd="ssh -i ~/.ssh/communion_production_key.pem ubuntu@api.joincommunion.xyz"
