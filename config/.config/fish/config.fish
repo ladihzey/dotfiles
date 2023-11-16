@@ -7,7 +7,8 @@ set -Ux fish_user_paths \
     $HOME/.asdf/bin \
     $HOME/.local/bin \
     $HOME/.cargo/bin \
-    $HOMEBREW/bin
+    $HOMEBREW/bin \
+    $HOME.local/share/coursier/bin
 
 # Sourcing Configs ============================================================
 starship init fish | source
@@ -17,8 +18,6 @@ source $HOMEBREW/opt/asdf/libexec/asdf.fish
 source $HOME/.config/fish/nord-theme.fish
 
 # Aliases =====================================================================
-source $HOME/.config/fish/private/communion-aliases.fish
-
 alias md="mkdir"
 alias ls="exa --icons --group-directories-first"
 alias ll="ls --long --git --no-permissions --no-user"
@@ -29,4 +28,3 @@ alias find="fd"
 alias grep="rg"
 alias python="python3"
 alias pip="pip3"
-

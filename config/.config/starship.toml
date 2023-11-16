@@ -7,6 +7,7 @@ $git_status\
 [](fg:green bg:purple)\
 $rust\
 $elixir\
+$scala\
 $ruby\
 $python\
 $conda\
@@ -64,13 +65,13 @@ disabled = true
 symbol = ""
 
 [conda]
-symbol = ""
+symbol = "󱔎"
 style = "bg:purple fg:black"
 version_format = "($major).($minor)"
 format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [dart]
-symbol = ""
+symbol = ""
 style = "bg:purple fg:black"
 version_format = "($major).($minor)"
 format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
@@ -143,6 +144,12 @@ format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
 
 [lua]
 symbol = ""
+style = "bg:purple fg:black"
+version_format = "($major).($minor)"
+format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'
+
+[scala]
+symbol = ""
 style = "bg:purple fg:black"
 version_format = "($major).($minor)"
 format = '[[ $symbol ($version) ](bg:purple fg:black)]($style)'

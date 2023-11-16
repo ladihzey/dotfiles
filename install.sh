@@ -12,19 +12,18 @@ brew install \
     fd \
     fish \
     fzf \
-    httpie \
+    just \
     lazygit \
+    lf \
+    neofetch \
     neovim \
     ripgrep \
     starship \
     stow \
     thefuck \
+    watchexec \
     zellij \
-    zoxide \
-    just \
-    lf \
-    neofetch \
-    watchexec
+    zoxide
 
 # Install NodeJS
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
@@ -55,12 +54,14 @@ code --install-extension \
     GrapeCity.gc-excelviewer \
     Gruntfuggly.todo-tree \
     helgardrichard.helium-icon-theme \
+    humao.rest-client \
+    mhutchie.git-graph \
     mikestead.dotenv \
-    ms-python.python \
-    ms-python.vscode-pylance \
-    ms-vscode.live-server \
     rust-lang.rust-analyzer \
+    scala-lang.scala \
+    scalameta.metals \
     serayuzgur.crates \
+    solomonkinard.reverse \
     streetsidesoftware.code-spell-checker \
     streetsidesoftware.code-spell-checker-russian \
     tamasfe.even-better-toml \

@@ -1,11 +1,10 @@
 {
-  "workbench.activityBar.visible": false,
   "workbench.editor.limit.enabled": true,
   "workbench.iconTheme": "helium-icon-theme",
   "workbench.editor.limit.value": 1,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "workbench.tree.indent": 20,
   "workbench.localHistory.mergeWindow": 30,
   "helium-icon-theme.hidesExplorerArrows": true,
@@ -33,7 +32,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "Cargo.toml": "Cargo*",
+    "Cargo.toml": "Cargo*, rustfmt*",
     "*.ts": "${capture}.spec.ts",
     "*.tsx": "${capture}.tests.tsx, ${capture}.*ss",
     "next.config.js": "next*",
@@ -65,20 +64,20 @@
   "editor.minimap.renderCharacters": false,
   "editor.acceptSuggestionOnCommitCharacter": true,
   "editor.glyphMargin": true,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "editor.tabSize": 4,
   "editor.rulers": [120],
   "editor.accessibilitySupport": "off",
-  "editor.folding": false,
+  "editor.folding": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.multiCursorModifier": "ctrlCmd",
   "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
   "debug.onTaskErrors": "abort",
   "debug.javascript.autoAttachFilter": "disabled",
   "debug.allowBreakpointsEverywhere": true,
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
+  "files.autoSaveDelay": 1500,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.eol": "\n",
@@ -118,13 +117,21 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.formatOnSave": true
   },
+  "[ocaml]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+
   "typescript.tsserver.log": "off",
+  "typescript.preferences.useAliasesForRenames": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.inlayHints.parameterNames.enabled": "all",
   "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": true,
+
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "rust-analyzer.check.command": "clippy",
+  "javascript.preferences.useAliasesForRenames": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
+
   "emmet.includeLanguages": {
     "rust": "html",
     "*.rs": "html",
@@ -133,6 +140,7 @@
     "rust": "html",
     "*.rs": "html",
   },
+  "rust-analyzer.check.command": "clippy",
   "files.associations": {
     "*.rs": "rust",
   },
@@ -654,4 +662,14 @@
     "whitespaces"
   ],
   "diffEditor.maxComputationTime": 0,
+  "git.suggestSmartCommit": false,
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.activityBar.location": "hidden",
+  "workbench.activityBar.visible": false,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "metals.javaHome": "/home/ladihzey/.jabba/jdk/openjdk@1.17.0",
 }
